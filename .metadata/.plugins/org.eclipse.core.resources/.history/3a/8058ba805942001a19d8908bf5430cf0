@@ -1,0 +1,23 @@
+package test;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.Controller;
+
+@Controller
+public class TestController {
+	public ModelAndView test {
+		System.out.println("컨트롤러 요청 완료");
+		ModelAndView mav = new ModelAndView();
+		String data="";
+		for (int i = 1; i < 10; i++) {
+			data=data+(i+" x "+"9"+"="+(i*9)+"<br/>");
+		}
+		mav.addObject("gugu",data);
+		mav.setViewName("test/result");
+		return mav;
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package member;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class SearchController {
+	public ModelAndView search(String search) {
+		System.out.println("검색어: "+search);
+		return new ModelAndView("test/index");
+	}
+}

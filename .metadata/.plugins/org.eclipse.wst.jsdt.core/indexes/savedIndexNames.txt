@@ -1,0 +1,5 @@
+INDEX VERSION 1.4+C:\IoTJY\Spring\STSWork\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+716303009.index
+1820677373.index
+3401076437.index
+1381939524.index

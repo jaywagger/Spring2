@@ -1,0 +1,12 @@
+package test;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class IndexController {
+	public String main() {
+		System.out.println("Annotation기반 컨트롤러");
+		return "test/index";//view에 대한 정보
+	}
+	
+}
