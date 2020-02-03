@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 %>
 </head>
 <body>
-	<form name="login_frm" action="/erp/login.do" method="post">
+	<form name="login_frm" action="/erp/emp/login.do" method="post">
 		<table cellpadding="0" cellspacing=5 width="815" bgcolor=#f3f3f3
 			border=0>
 			<tr>
@@ -59,6 +59,7 @@
 																				 value="<%= id%>"></td>
 																			<td rowspan=3 style="padding-left: 10" valign=bottom>
 																			<input
+																			
 																				type='image' src="/erp/images/btn_login.gif"
 																				border="0" tabindex=3></td>
 																		</tr>

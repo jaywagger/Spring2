@@ -1,13 +1,13 @@
 package multi.erp.board;
 
 import java.util.List;
-
+//SQL하나 당 메소드 하나
 public interface BoardDAO {
 	//게시글전체목록조회
 	List<BoardVO> boardList();
 	//게시글등록하기
 	int insert(BoardVO board);
-	List<BoardVO> searchList(String search);
+	List<BoardVO> categorySearch(String category);
 	List<BoardVO> searchList(String tag,String search);
 	List<BoardVO> pageList();
 	//게시글조회
@@ -16,4 +16,5 @@ public interface BoardDAO {
 	int update(BoardVO board);
 	//게시글삭제
 	int delete(String board_no);
+	
 }

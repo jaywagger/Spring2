@@ -5,10 +5,12 @@
   <configuration>
   	<typeAliases>								<!--result type에 명시  -->
   		<typeAlias type="multi.erp.board.BoardVO" alias="board"/>
+  		<typeAlias type="multi.erp.emp.MemberVO" alias="emp"/>
   	</typeAliases>
   	
   	<mappers>
   		<mapper resource="mapper/board.xml"/>
+  		<mapper resource="mapper/emp.xml"/>
   	</mappers>
   	
   </configuration>

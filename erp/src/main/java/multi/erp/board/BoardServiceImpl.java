@@ -13,9 +13,19 @@ public class BoardServiceImpl implements BoardService {
 	BoardDAO dao;
 	
 	@Override
-	public List<BoardVO> boardList() {
-		// TODO Auto-generated method stub
-		return dao.boardList();
+	public List<BoardVO> boardList(String category) {
+		List<BoardVO> list = null;
+		//1개의 메소드를 2개의 기능 실행
+		if(category!=null) {
+			if(category.equals("all")) {
+				System.out.println("all");
+				list= dao.boardList();
+			}else {
+				list = dao.categorySearch(category);
+			}
+		}
+		
+		return list;
 	}
 
 	@Override
@@ -30,15 +40,9 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<BoardVO> searchList(String search) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public List<BoardVO> searchList(String tag, String search) {
-		// TODO Auto-generated method stub
-		return null;
+		 
+		return dao.searchList(tag, search);
 	}
 
 	@Override
@@ -63,6 +67,12 @@ public class BoardServiceImpl implements BoardService {
 	public int delete(String board_no) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<BoardVO> categorySearch(String category) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
